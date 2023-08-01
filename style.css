@@ -14,10 +14,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 40rem;
+  height: 42rem;
   width: 40rem;
   margin: 1.25rem auto;
   padding: 8px;
+}
+
+.container h1 {
+  margin-bottom: 8px;
 }
 
 .calc-container {
