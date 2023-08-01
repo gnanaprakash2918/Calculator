@@ -40,14 +40,14 @@ body {
 
 .output-screen {
   height: 30%;
-  border: 3px solid black;
+  border: 2px solid black;
   margin-bottom: 5px;
   border-radius: 6px;
 }
 
 .input-container {
   height: 70%;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 6px;
   display: flex;
   flex-wrap: wrap;
