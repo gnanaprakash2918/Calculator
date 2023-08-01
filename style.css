@@ -40,7 +40,7 @@ body {
 
 .output-screen {
   height: 30%;
-  background-color: whitesmoke;
+  background-color: rgb(78, 78, 78);
   border: 2px solid black;
   margin-bottom: 8px;
   border-radius: 6px;
