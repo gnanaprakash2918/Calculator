@@ -29,4 +29,5 @@ body {
   flex-direction: column;
   height: 100%;
   width: 70%;
+  border: 8px solid red;
 }
