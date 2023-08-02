@@ -11,6 +11,8 @@ const operatorButtons = Array.from(document.querySelectorAll(".operator"));
 const outputTop = document.querySelector(".output-top");
 const outputBottom = document.querySelector(".output-bottom");
 const equalButton = document.querySelector(".equal-btn");
+const acButton = document.querySelector(".all-clear-btn");
+const delButton = document.querySelector(".del-btn");
 
 //Variable to store previous inputs
 let prevNum = "";
@@ -45,4 +47,8 @@ equalButton.addEventListener("click", (e) => {
   console.log(prevNum);
   currVal = outputBottom.textContent = evaluateExpression(prevNum);
   numberClicked = true;
+});
+
+acButton.addEventListener("click", (e) => {
+  outputBottom.textContent = outputTop.textContent = "";
 });
