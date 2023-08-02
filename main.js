@@ -1,6 +1,21 @@
 // Operators List
 const operators = ["+", "-", "/", "X", "=", "%"];
 
+function precedence(operator) {
+  switch (operator) {
+    case "+":
+    case "-":
+      return 1;
+
+    case "*":
+    case "/":
+      return 2;
+
+    default:
+      return -1;
+  }
+}
+
 //Convert Infix to PostFix Expression
 function InfixToPostFix(expr) {}
 
