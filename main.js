@@ -1,12 +1,20 @@
+function evaluateExpression(expr) {}
+
 const operators = ["+", "-", "/", "X", "=", "%"];
 
-const buttons = Array.from(document.querySelectorAll(".input-btn"));
-const output = document.querySelector(".output-bottom");
+const buttons = Array.from(document.querySelectorAll(".number-btn,.operator"));
+const outputTop = document.querySelector(".output-top");
+const outputBottom = document.querySelector(".output-bottom");
+
+const history = "";
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const txt = e.target.textContent;
-    console.log(operators.includes(txt));
-    output.textContent += operators.includes(txt) ? ` ${txt} ` : txt;
+    if (operators.includes(txt)) {
+      outputTop.textContent += ` ${txt} `;
+    } else {
+      outputBottom.textContent += txt;
+    }
   });
 });

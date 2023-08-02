@@ -55,6 +55,8 @@ body {
 }
 
 .output-bottom {
+  display: flex;
+  justify-content: flex-end;
   height: 60%;
   width: 100%;
   font-size: 1.875rem;
