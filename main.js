@@ -51,4 +51,13 @@ equalButton.addEventListener("click", (e) => {
 
 acButton.addEventListener("click", (e) => {
   outputBottom.textContent = outputTop.textContent = "";
+  prevNum = "";
+});
+
+delButton.addEventListener("click", (e) => {
+  let text = outputBottom.textContent;
+  if (text.length > 0) {
+    text = text.substring(0, text.length - 1);
+  }
+  outputBottom.textContent = text;
 });
