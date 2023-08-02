@@ -49,19 +49,24 @@ body {
   align-items: center;
 }
 
+.output-bottom,
+.output-top {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px;
+  color: #e8f1f2;
+}
+
 .output-top {
   height: 40%;
   width: 100%;
+  font-size: 1.5rem;
 }
 
 .output-bottom {
-  display: flex;
-  justify-content: flex-end;
   height: 60%;
-  width: 100%;
   font-size: 1.875rem;
-  padding: 20px;
-  color: #e8f1f2;
 }
 
 .input-container {

@@ -12,7 +12,7 @@ buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const txt = e.target.textContent;
     if (operators.includes(txt)) {
-      outputTop.textContent += ` ${txt} `;
+      outputTop.textContent += `${outputBottom.textContent} ${txt} `;
     } else {
       outputBottom.textContent += txt;
     }
