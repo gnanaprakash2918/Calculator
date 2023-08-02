@@ -17,7 +17,36 @@ function precedence(operator) {
 }
 
 //Convert Infix to PostFix Expression
-function InfixToPostFix(expr) {}
+function InfixToPostFix(expr) {
+  let stack = [];
+  let result = "";
+
+  for (let i = 0; i < expr.length; i++) {
+    let c = expr[i];
+
+    if (
+      (c >= "a" && c <= "z") ||
+      (c >= "A" && c <= "Z") ||
+      (c >= "0" && c <= "9")
+    )
+      result += c;
+    else {
+      while (
+        !(stack.length == 0) &&
+        precedence(expr[i]) <= precedence(stack[stack.length - 1])
+      ) {
+        result += stack.pop();
+      }
+      stack.push(c);
+    }
+  }
+
+  while (!stack.length == 0) {
+    result += stack.pop();
+  }
+
+  return result;
+}
 
 // Evaluate Expression Function
 function evaluateExpression(expr) {}
@@ -52,3 +81,5 @@ operatorButtons.forEach((btn) => {
     prevNum += `${outputBottom.textContent} ${currOperator} `;
   });
 });
+
+console.log(InfixToPostFix("a+b*c^d-e^f+g*h-i"));
