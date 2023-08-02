@@ -10,14 +10,20 @@ const numberButtons = Array.from(document.querySelectorAll(".number-btn"));
 const operatorButtons = Array.from(document.querySelectorAll(".operator"));
 const outputTop = document.querySelector(".output-top");
 const outputBottom = document.querySelector(".output-bottom");
+const equalButton = document.querySelector(".equal-btn");
 
 //Variable to store previous inputs
 let prevNum = "";
 let numberClicked = false;
+let currVal = "";
 
 //Add eventListeners to numberButtons
 numberButtons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    if (numberClicked) {
+      outputBottom.textContent = "";
+      numberClicked = false;
+    }
     const txt = e.target.textContent;
     outputBottom.textContent += txt;
     prevNum += txt;
@@ -31,4 +37,12 @@ operatorButtons.forEach((btn) => {
     outputBottom.textContent += ` ${currOperator} `;
     prevNum += ` ${currOperator} `;
   });
+});
+
+equalButton.addEventListener("click", (e) => {
+  outputTop.textContent = prevNum;
+  prevNum = prevNum.replace("X", "*");
+  console.log(prevNum);
+  currVal = outputBottom.textContent = evaluateExpression(prevNum);
+  numberClicked = true;
 });
