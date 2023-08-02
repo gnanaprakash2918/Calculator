@@ -19,5 +19,8 @@ numberButtons.forEach((btn) => {
 });
 
 operatorButtons.forEach((btn) => {
-  btn.addEventListener("click", (e) => {});
+  btn.addEventListener("click", (e) => {
+    const currOperator = e.target.textContent;
+    outputTop.textContent += `${outputBottom.textContent} ${currOperator} `;
+  });
 });
