@@ -1,8 +1,11 @@
-// Evaluate Expression Function
-function evaluateExpression(expr) {}
-
 // Operators List
 const operators = ["+", "-", "/", "X", "=", "%"];
+
+//Convert Infix to PostFix Expression
+function InfixToPostFix(expr) {}
+
+// Evaluate Expression Function
+function evaluateExpression(expr) {}
 
 //DOM elements
 const numberButtons = Array.from(document.querySelectorAll(".number-btn"));
@@ -28,6 +31,7 @@ numberButtons.forEach((btn) => {
 //Add eventListeners to operatorButtons
 operatorButtons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    // outputBottom.textContent = evaluateExpression(prevNum);
     const currOperator = e.target.textContent;
     outputTop.textContent += `${outputBottom.textContent} ${currOperator} `;
     prevNum += `${outputBottom.textContent} ${currOperator} `;
